@@ -9,14 +9,15 @@ import org.cvtc.shapes.Sphere;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import junitparams.*;
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
 
 /**
  * @author wlarrabee
  *
  */
 @RunWith(JUnitParamsRunner.class)
-public class SphereSurfaceAreaTest {
+public class SphereVolumeTest {
 
 	@Test
 	@Parameters({
@@ -26,7 +27,7 @@ public class SphereSurfaceAreaTest {
 		"0",
 		"-1"		
 	})
-	public void surfaceAreaTest(float radius){
+	public void volumeTest(float radius){
 		//1.Arrange
 		final double DELTA = 1e-15;
 		
@@ -35,15 +36,14 @@ public class SphereSurfaceAreaTest {
 		if(radius < 0.0){
 			radius = 0;
 		}
-		
-		float expected = (4 * (float)Math.PI * radius * radius);
+
+		float expected = (float)Math.PI * radius * radius * radius * 4 / 3;
 		
 		//2.Act
-		float actual = sphere.surfaceArea();		
+		float actual = sphere.volume();		
 				
 		//3.Assert
 		assertEquals(expected, actual, DELTA);
 		
 	}
-
 }

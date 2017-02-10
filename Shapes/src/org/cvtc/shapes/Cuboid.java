@@ -48,17 +48,17 @@ public class Cuboid extends Shape {
 		this.depth = depth;
 	}
 	
-	public Cuboid(float width, float height, float depth){
+	public Cuboid(float width, float height, float depth) throws IllegalArgumentException{
 		//Constructor class for the Cuboid
 		//Check for negative numbers and make them equal to 0
-		if(width < 0.0){
-			width = (float)0.0;
+		if(width <= 0.0){
+			throw new IllegalArgumentException(Float.toString(width));
 		}
-		if(height < 0.0){
-			height = (float)0.0;
+		if(height <= 0.0){
+			throw new IllegalArgumentException(Float.toString(height));
 		}
-		if(depth < 0.0){
-			depth = (float)0.0;
+		if(depth <= 0.0){
+			throw new IllegalArgumentException(Float.toString(depth));
 		}
 		setWidth(width);
 		setHeight(height);

@@ -35,14 +35,6 @@ public class CylinderSurfaceAreaTest {
 		
 		Cylinder cylinder = new Cylinder(radius, height);
 		
-		if(radius < 0.0){
-			radius = 0;
-		}
-		
-		if(height < 0.0){
-			height = 0;
-		}
-		
 		float expected = 2 * (float)Math.PI * radius * height + 2 * (float)Math.PI * radius * radius;
 		
 		//2.Act

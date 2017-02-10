@@ -36,14 +36,6 @@ public class CylinderVolumeTest {
 		
 		Cylinder cylinder = new Cylinder(radius, height);
 		
-		if(radius < 0.0){
-			radius = 0;
-		}
-		
-		if(height < 0.0){
-			height = 0;
-		}
-		
 		float expected = (float)Math.PI * radius * radius * height;
 		
 		//2.Act

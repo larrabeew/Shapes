@@ -34,19 +34,7 @@ public class CuboidSurfaceAreaTest {
 		final double DELTA = 1e-15;
 		
 		Cuboid cuboid = new Cuboid(width, height, depth);
-		
-		if(width < 0.0){
-			width = 0;
-		}
-		
-		if(height < 0.0){
-			height = 0;
-		}
-		
-		if(depth < 0.0){
-			depth = 0;
-		}
-		
+
 		float expected = 2 * ((depth * width) + (width * height) + (height * depth));
 		
 		//2.Act

@@ -29,10 +29,6 @@ public class CylinderConstructorTest {
 		
 		Cylinder cylinder = new Cylinder(radius, height);
 		
-		if(radius < 0.0){
-			radius = 0;
-		}
-		
 		float expected = radius;
 		
 		//2.Act
@@ -59,10 +55,6 @@ public class CylinderConstructorTest {
 		final double DELTA = 1e-15;
 		
 		Cylinder cylinder = new Cylinder(radius, height);
-		
-		if(height < 0.0){
-			height = 0;
-		}
 		
 		float expected = height;
 		

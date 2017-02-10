@@ -36,18 +36,6 @@ public class CuboidVolumeTest {
 		
 		Cuboid cuboid = new Cuboid(width, height, depth);
 		
-		if(width < 0.0){
-			width = 0;
-		}
-		
-		if(height < 0.0){
-			height = 0;
-		}
-		
-		if(depth < 0.0){
-			depth = 0;
-		}
-		
 		float expected = depth*height*width;
 		
 		//2.Act

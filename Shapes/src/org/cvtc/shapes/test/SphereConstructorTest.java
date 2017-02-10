@@ -26,11 +26,6 @@ public class SphereConstructorTest {
 		
 		Sphere sphere = new Sphere(radius);
 		
-		if(radius < 0.0){
-			radius = 0;
-		}
-		
-		
 		float expected = radius;
 		
 		//2.Act

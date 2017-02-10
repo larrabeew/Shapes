@@ -36,14 +36,14 @@ public class Cylinder extends Shape {
 		this.height = height;
 	}
 
-	public Cylinder(float radius, float height){
+	public Cylinder(float radius, float height) throws IllegalArgumentException{
 		//Constructor class for the Cylinder
 		//Check for negative numbers and make them equal to 0
-		if(radius < 0){
-			radius = 0;
+		if(radius <= 0){
+			throw new IllegalArgumentException(Float.toString(radius));
 		}
-		if(height <0){
-			height = 0;
+		if(height <= 0){
+			throw new IllegalArgumentException(Float.toString(height));
 		}
 		setRadius(radius);
 		setHeight(height);		

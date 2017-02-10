@@ -32,10 +32,6 @@ public class SphereSurfaceAreaTest {
 		
 		Sphere sphere = new Sphere(radius);
 		
-		if(radius < 0.0){
-			radius = 0;
-		}
-		
 		float expected = (4 * (float)Math.PI * radius * radius);
 		
 		//2.Act

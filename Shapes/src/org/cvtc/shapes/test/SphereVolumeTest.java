@@ -32,10 +32,6 @@ public class SphereVolumeTest {
 		final double DELTA = 1e-15;
 		
 		Sphere sphere = new Sphere(radius);
-		
-		if(radius < 0.0){
-			radius = 0;
-		}
 
 		float expected = (float)Math.PI * radius * radius * radius * 4 / 3;
 		

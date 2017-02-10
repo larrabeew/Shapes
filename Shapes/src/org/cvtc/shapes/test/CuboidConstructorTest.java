@@ -29,10 +29,6 @@ public class CuboidConstructorTest {
 		
 		Cuboid cuboid = new Cuboid(width, height, depth);
 		
-		if(width < 0.0){
-			width = 0;
-		}
-		
 		float expected = width;
 		
 		//2.Act
@@ -60,10 +56,6 @@ public class CuboidConstructorTest {
 		
 		Cuboid cuboid = new Cuboid(width, height, depth);
 		
-		if(height < 0.0){
-			height = 0;
-		}
-		
 		float expected = height;
 		
 		//2.Act		
@@ -90,10 +82,6 @@ public class CuboidConstructorTest {
 		final double DELTA = 1e-15;
 		
 		Cuboid cuboid = new Cuboid(width, height, depth);
-		
-		if(depth < 0.0){
-			depth = 0;
-		}
 		
 		float expected = depth;
 		

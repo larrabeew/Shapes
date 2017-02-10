@@ -24,11 +24,11 @@ public class Sphere extends Shape {
 		this.radius = radius;
 	}
 
-	public Sphere(float radius){
+	public Sphere(float radius) throws IllegalArgumentException{
 		//Constructor class for the sphere
 		//Check for negative numbers and make them equal to 0
-		if(radius < 0){
-			radius = 0;
+		if(radius <= 0){
+			throw new IllegalArgumentException(Float.toString(radius));
 		}
 		setRadius(radius);	
 	}

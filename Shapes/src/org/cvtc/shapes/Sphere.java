@@ -3,7 +3,6 @@
  */
 package org.cvtc.shapes;
 
-import javax.swing.JOptionPane;
 
 /**
  * @author Wesley Larrabee
@@ -24,8 +23,9 @@ public class Sphere extends Shape {
 		this.radius = radius;
 	}
 
-	public Sphere(float radius) throws IllegalArgumentException{
+	public Sphere(float radius, Dialog dialog) throws IllegalArgumentException{
 		//Constructor class for the sphere
+		super(dialog);
 		//Check for negative numbers and make them equal to 0
 		if(radius <= 0){
 			throw new IllegalArgumentException(Float.toString(radius));
@@ -48,7 +48,8 @@ public class Sphere extends Shape {
 	@Override
 	public void render() {
 		//render function for the sphere
-		JOptionPane.showMessageDialog(null, "The sphere has a radius of " + getRadius() + ".  Having a surface area of " + surfaceArea() + " and a volume of " + volume());
+		//JOptionPane.showMessageDialog(null, "The sphere has a radius of " + getRadius() + ".  Having a surface area of " + surfaceArea() + " and a volume of " + volume());
+		this.getDialog().show("The sphere has a radius of " + getRadius() + ".  Having a surface area of " + surfaceArea() + " and a volume of " + volume(), "Sphere");
 	}
 	
 }

@@ -9,7 +9,9 @@ package org.cvtc.shapes;
  * 
  *
  */
-public class Shape {
+public abstract class Shape {
+	
+	private Dialog dialog;
 	
 	public float surfaceArea(){
 		//dummy function to handle sf
@@ -23,6 +25,18 @@ public class Shape {
 	
 	public void render(){
 		//dummy function for rendering
+	}
+	
+	public Shape(Dialog dialog){
+		setDialog(dialog);
+	}
+
+	public Dialog getDialog() {
+		return dialog;
+	}
+
+	private void setDialog(Dialog dialog) {
+		this.dialog = dialog;
 	}
 	
 }

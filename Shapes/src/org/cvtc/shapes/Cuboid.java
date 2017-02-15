@@ -3,8 +3,6 @@
  */
 package org.cvtc.shapes;
 
-import javax.swing.JOptionPane;
-
 /**
  * @author Wesley Larrabee
  * This class is for creating Cuboids.  You can set the width, height, and length along with calculating the SF and volume.
@@ -48,7 +46,10 @@ public class Cuboid extends Shape {
 		this.depth = depth;
 	}
 	
-	public Cuboid(float width, float height, float depth) throws IllegalArgumentException{
+	
+	public Cuboid(float width, float height, float depth, Dialog dialog) throws IllegalArgumentException{
+		
+		super(dialog);
 		//Constructor class for the Cuboid
 		//Check for negative numbers and make them equal to 0
 		if(width <= 0.0){
@@ -80,7 +81,8 @@ public class Cuboid extends Shape {
 	@Override
 	public void render() {
 		//render function for the Cuboid
-		JOptionPane.showMessageDialog(null, "The cubiod is " + getWidth() + " x " + getHeight() + " x " +  getDepth() + ".  Having a surface area of " + surfaceArea() + " and a volume of " + volume());
+		//JOptionPane.showMessageDialog(null, "The cubiod is " + getWidth() + " x " + getHeight() + " x " +  getDepth() + ".  Having a surface area of " + surfaceArea() + " and a volume of " + volume());
+		this.getDialog().show("The cubiod is " + getWidth() + " x " + getHeight() + " x " +  getDepth() + ".  Having a surface area of " + surfaceArea() + " and a volume of " + volume(), "Cuboid");
 	}
 	
 }

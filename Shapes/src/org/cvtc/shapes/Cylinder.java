@@ -3,7 +3,6 @@
  */
 package org.cvtc.shapes;
 
-import javax.swing.JOptionPane;
 
 /**
  * @author Wesley Larrabee
@@ -36,7 +35,9 @@ public class Cylinder extends Shape {
 		this.height = height;
 	}
 
-	public Cylinder(float radius, float height) throws IllegalArgumentException{
+	public Cylinder(float radius, float height, Dialog dialog) throws IllegalArgumentException{
+		
+		super(dialog);
 		//Constructor class for the Cylinder
 		//Check for negative numbers and make them equal to 0
 		if(radius <= 0){
@@ -64,7 +65,8 @@ public class Cylinder extends Shape {
 	@Override
 	public void render() {
 		//render function for the Cylinder
-		JOptionPane.showMessageDialog(null, "The cylinder is " + getRadius() + " x " + getHeight() + ".  Having a surface area of " + surfaceArea() + " and a volume of " + volume());
+		//JOptionPane.showMessageDialog(null, "The cylinder is " + getRadius() + " x " + getHeight() + ".  Having a surface area of " + surfaceArea() + " and a volume of " + volume());
+		this.getDialog().show("The cylinder is " + getRadius() + " x " + getHeight() + ".  Having a surface area of " + surfaceArea() + " and a volume of " + volume(), "Cylinder");
 	}
 	
 }

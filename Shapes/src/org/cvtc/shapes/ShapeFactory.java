@@ -8,9 +8,9 @@ public class ShapeFactory {
 		this.dialog = dialog;
 	}
 	
-	public Cuboid makeCuboid(float width, float hieght, float depth){
+	public Cuboid makeCuboid(float width, float height, float depth){
 		
-		return new Cuboid(width, hieght, depth, dialog);
+		return new Cuboid(width, height, depth, dialog);
 		
 	}
 	
